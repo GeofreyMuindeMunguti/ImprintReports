@@ -54,6 +54,10 @@ body {
         margin-right:10%; ">
 
 <div id="mySidenav" class="sidenav">
+  <div class="navbar-header">
+        <img src="../dbcontrol/logo2.jpeg" class="img-circle" alt="Cinque Terre" width="40px" height="40px" width="50px">      
+    </div>
+    <br>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="../dbcontrol/ourdeals.php"><i class="fa fa-thumbs-up"></i>Deals</a>  
   <a href="../dbcontrol/ourreports.php"><i class="fa fa-file-pdf-o"></i>Reports</a>  
@@ -83,7 +87,7 @@ function closeNav() {
   <nav class="navbar navbar-inverse" id= "navbar" style="background-color: white;">
   <div class="container-fluid">
     <div class="navbar-header">
-        <img src="logo2.jpeg" class="img-circle" alt="Cinque Terre" width="40px" height="40px" width="50px">      
+        <img src="../dbcontrol/logo2.jpeg" class="img-circle" alt="Cinque Terre" width="40px" height="40px" width="50px">      
     </div>
      <h3>Imprint Africa Report Generating System.</h3>
      
