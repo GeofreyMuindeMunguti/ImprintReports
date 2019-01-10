@@ -55,8 +55,9 @@ body {
 
 <div id="mySidenav" class="sidenav">
   <div class="navbar-header">
-        <img src="../dbcontrol/logo2.jpeg" class="img-circle" alt="Cinque Terre" width="40px" height="40px" width="50px">      
+        <img src="../dbcontrol/logo2.jpeg" class="img-circle" alt="Cinque Terre" width="40px" height="40px" width="50px">    
     </div>
+     <h3 style="color: white;"> admin@imprintaf.com</h3>
     <br>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="../dbcontrol/ourdeals.php"><i class="fa fa-thumbs-up"></i>Deals</a>  
