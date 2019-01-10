@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Dosis', sans-serif;
+  line-height: 1.6;
+  color: #666;
+  background: #F6F6F6;
+}
+ 
+ .text-value {
+  font-size: 1.3125rem;
+  font-weight: 600;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+.col-xl-auto {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+  background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+p {
+  padding: 0 2.5rem 2.5rem;
+  margin: 0;
+}
+.container4
+{
+  
+  border: 2px solid;
+  border-color: black;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.onec{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  margin-top: 10px;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+   border: 2px solid;
+  border-color: red;
+}
+#msg
+{
+  display: none;
+  color: green;
+}
+#navbar
+{
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+}
+ 
+ input 
+ {
+  width: 90%;
+  padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+ }
+textarea
+{
+  width: 90%;
+}
+
+.card {
+  margin: 1rem;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s linear;
+}
+.new
+{
+  margin: 1rem;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s linear;
+  width: 100%;
+
+}
+.card2 {
+  margin: 1rem;
+  background: #BA4A00;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+   width: 800px;
+   height: 50px;
+   text-align: center;
+}
+
+.card:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    flex: 1 1 calc(33% - 2rem);
+  }
+}
+
+.card:nth-child(2n) h1 {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.card:nth-child(4n) h1 {
+  background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.card:nth-child(5n) h1 {
+  background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
+}
+
+
+.progress-xs {
+  height: 4px;
+}
+
+.progress-sm {
+  height: 8px;
+}
+
+.progress-white {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.progress-white .progress-bar {
+  background-color: #fff;
+}
+
+.progress-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-bottom: 1rem;
+}
+
+.progress-group-prepend {
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.progress-group-icon {
+  margin: 0 1rem 0 0.25rem;
+  font-size: 1.09375rem;
+}
+
+.progress-group-text {
+  font-size: 0.765625rem;
+  color: #73818f;
+}
+
+.progress-group-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  margin-bottom: 0.25rem;
+}
+
+.progress-group-bars {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.progress-group-bars .progress:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+.progress-group-header + .progress-group-bars {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}

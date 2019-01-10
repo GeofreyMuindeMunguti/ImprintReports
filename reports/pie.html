@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function() {
+
+var chart4 = new CanvasJS.Chart("pichart", {
+	animationEnabled: true,
+	title: {
+		text: "Desktop Search Engine Market Share - 2016"
+	},
+	data: [{
+		type: "pie",
+		startAngle: 240,
+		yValueFormatString: "##0.00\"%\"",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+			{y: 79.45, label: "Google"},
+			{y: 7.31, label: "Bing"},
+			{y: 7.06, label: "Baidu"},
+			{y: 4.91, label: "Yahoo"},
+			{y: 1.26, label: "Others"}
+		]
+	}]
+});
+chart4.render();
+
+//html to pdf api
+//user name
+//GeofMuinde
+//6pVLqYu5LGYRYkG6IHoDpD1M6ZqGJm3MpHuOmMdobrUD0ZKH
+//select api key
+//57cebec7-326d-4396-a002-0ae099c93196
+}
+</script>
+</head>
+<body>
+<div id="piechart" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
