@@ -17,7 +17,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #1D2951;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -27,7 +27,7 @@ body {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: grey;
   display: block;
   transition: 0.3s;
 }
@@ -54,12 +54,16 @@ body {
         margin-right:10%; ">
 
 <div id="mySidenav" class="sidenav">
-  <div class="navbar-header">
-        <img src="../dbcontrol/logo2.jpeg" class="img-circle" alt="Cinque Terre" width="40px" height="40px" width="50px">    
-    </div>
-     <h3 style="color: white;"> admin@imprintaf.com</h3>
-    <br>
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="sidebar-header">
+    
+        <h3 style="color: white;"> Quick Links</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <a style="color: white;" href="http://www.imprintaf.com">ImprintAfrica.com</a>
+        </ul>
+        <hr/>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="../dbcontrol/ourdeals.php"><i class="fa fa-thumbs-up"></i>Deals</a>  
   <a href="../dbcontrol/ourreports.php"><i class="fa fa-file-pdf-o"></i>Reports</a>  
   <a href="../dbcontrol/view.php"><i class="fa fa-hourglass-half "></i>Audited</a> 
@@ -80,17 +84,17 @@ function closeNav() {
    
 
 
-<body>
+<body >
    
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
-  <nav class="navbar navbar-inverse" id= "navbar" style="background-color: white;">
+  <nav class="navbar navbar-inverse" id= "navbar" style="background-color: #1D2951;">
   <div class="container-fluid">
     <div class="navbar-header">
         <img src="../dbcontrol/logo2.jpeg" class="img-circle" alt="Cinque Terre" width="40px" height="40px" width="50px">      
     </div>
-     <h3>Imprint Africa Report Generating System.</h3>
+     <h3 style="color: white;">Imprint Africa Report Generating System.</h3>
      
     
      <p style="color: white;">geofrey@imprintaf.com</p> 

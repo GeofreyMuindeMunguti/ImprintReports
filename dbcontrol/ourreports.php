@@ -45,7 +45,7 @@ background-color: #ccc;
 padding: 8px;"> 
 
   <table class="table table-striped" id="myTable" >
-              <tr style="background: black; text-decoration-color: white;">
+              <tr style="background:  #1D2951; text-decoration-color: white;">
               	  
                   <th class="white-w3ls" width="10%" style="color: white;"> Link</th>
                   <th class="white-w3ls" width="20%" style="color: white;">Date</th>
