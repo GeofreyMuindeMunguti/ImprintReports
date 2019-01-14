@@ -71,7 +71,7 @@ padding: 8px;">
             echo '<td class="white-w3ls">'.$row3['date'].'</td>';
              echo '<td class="white-w3ls">'.$row3['comments'].'</td>';
               
-             echo '<td><a href="../reports/dbcon.php?id='.$row3['link'].'">REPORT </a></td>';
+             echo '<td><a href="../reports/dbcon.php?id='.$row3['id'].'">REPORT </a></td>';
             echo '<td class="white-w3ls">'.$row3['id'].'</td>';
             
             echo '</tr>';

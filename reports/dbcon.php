@@ -16,8 +16,36 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
  
-  
-$sql = "SELECT  * FROM `deals` WHERE `link` = '$weblink'";
+$sql2 = "SELECT  * FROM `report` WHERE `id` = '$weblink'";
+  $result2 = mysqli_query($conn,$sql2) or die (mysqli_error());
+
+ while($rows2 = mysqli_fetch_assoc($result2))
+    {
+     $rvar = $rows2['link'];
+     $rcomments = $rows2['comments'];
+     $rvisits = $rows2['visits'];
+     //$rdetails = $rows2['details'];
+     //$rcontacts = $rows2['contact'];
+     $rrank = $rows2['rank'];
+     //$date = $rows['date'];
+     $rdate = $rows2['date'];
+     $rdate2 = "2018-10-2";
+     //traffic share
+     $rgtraffic = $rows2['organics_traffic'];
+     $rdtraffic = $rows2['direct_traffic'];
+     $retraffic = $rows2['email_traffic'];
+     $rstraffic = $rows2['social_traffic'];
+     $rotraffic = $rows2['other_traffic'];
+     //$rpackage = $rows2['package'];
+     //$rdesc = $rows2['description'];
+     $rtraffic_target = '0';
+
+     //echo $var;
+     //header('Location: main.php');
+   
+
+    }  
+$sql = "SELECT  * FROM `deals` WHERE `link` = '$rvar'";
  $result = mysqli_query($conn,$sql) or die (mysqli_error());
 
  while($rows = mysqli_fetch_assoc($result))
@@ -47,36 +75,13 @@ $sql = "SELECT  * FROM `deals` WHERE `link` = '$weblink'";
 
     }
 
-  $sql2 = "SELECT  * FROM `report` WHERE `link` = '$weblink'";
-  $result2 = mysqli_query($conn,$sql2) or die (mysqli_error());
-
- while($rows2 = mysqli_fetch_assoc($result2))
-    {
-     $rvar = $rows2['link'];
-     $rcomments = $rows2['comments'];
-     $rvisits = $rows2['visits'];
-     //$rdetails = $rows2['details'];
-     //$rcontacts = $rows2['contact'];
-     $rrank = $rows2['rank'];
-     //$date = $rows['date'];
-     $rdate = $rows2['date'];
-     $rdate2 = "2018-10-2";
-     //traffic share
-     $rgtraffic = $rows2['organics_traffic'];
-     $rdtraffic = $rows2['direct_traffic'];
-     $retraffic = $rows2['email_traffic'];
-     $rstraffic = $rows2['social_traffic'];
-     $rotraffic = $rows2['other_traffic'];
-     //$rpackage = $rows2['package'];
-     //$rdesc = $rows2['description'];
-     $rtraffic_target = '0';
-
-     //echo $var;
-     //header('Location: main.php');
    
+       $sql3 = "SELECT * FROM improved ";
+       $res3 = mysqli_query($conn,$sql3);
 
-    }
-     
+       $sql4 = "SELECT * FROM todo ";
+       $res4 = mysqli_query($conn,$sql4);
+
 $conn->close();
 ?>
   
@@ -141,6 +146,20 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+
+#main{
+  width:200px;
+  height:240px;
+  border:1px solid black;
+  padding:10px;
+}
+#main > div{
+  float:right;
+  margin:35px;;
+}
+ 
+
 </style>
 </head>
 <body>
@@ -386,8 +405,70 @@ function closeNav() {
                
           </div>
             </div>
+<div style=" margin: 1rem;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s linear;
+  text-align:center;
+  
 
- 
+  border: 2px solid #add8e6;"> 
+ <div >
+  <h3>Performance Analysis</h3>
+  <div id="traffic analysis">
+    <table class="table table-striped" id="myTable" >
+              <tr style="background:  #1D2951; text-decoration-color: white;">
+                  
+                  <th class="white-w3ls" width="50%" style="color: white;">Actions</th>
+                   
+                    <th class="white-w3ls" width="50%" style="color: white;">Id</th>
+                     
+              </tr>
+
+               <tbody>
+
+    <?php
+        if($rvisits>$visits){
+          echo "<h4>Significant Improvement in site Performance Noted, The following could be the reasons as to why.</h4>";
+        while($row3 = mysqli_fetch_assoc($res3))
+        {
+            echo '<tr>';
+          
+            echo '<td class="white-w3ls">'.$row3['reason'].'</td>';
+            echo '<td class="white-w3ls">'.$row3['id'].'</td>';
+            
+            
+            echo '</tr>';
+        }
+      }
+      else 
+      { echo "<h4>No Significant Improvement on site performance, This is what can be done.</h4>";
+        while($row4 = mysqli_fetch_assoc($res4))
+        {
+            echo '<tr>';
+          
+            echo '<td class="white-w3ls">'.$row4['action'].'</td>';
+            echo '<td class="white-w3ls">'.$row4['id'].'</td>';
+            
+            
+            echo '</tr>';
+        }
+
+      }
+    ?>
+     </tbody>
+ </table>
+  </div>
+  <div id="traffic share analysis">
+    
+  </div>
+  
+
+</div>
+
+</div>
 <div style=" margin: 1rem;
   background: white;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
@@ -639,6 +720,8 @@ function pdf()
 
 </script>
  
+ 
+
     <script type="text/javascript">
       var date = new Date();
       var tday = date.getDate();
@@ -658,8 +741,6 @@ function pdf()
       }
     
     </script>
-</body>
-</html>
-
+  
 </body>
 </html>
