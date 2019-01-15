@@ -132,7 +132,7 @@ $conn->close();
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
          <li class="nav-item">
-             <a href="javascript:q=(document.location.href);void(open('../dbcontrol/ourreports.php?url='+escape(q),'_self','resizable,location,menubar,toolbar,scrollbars,status'));">New Report</a>
+             <a class="nav-link js-scroll-trigger" href="javascript:q=(document.location.href);void(open('../dbcontrol/ourreports.php?url='+escape(q),'_self','resizable,location,menubar,toolbar,scrollbars,status'));">New Report</a>
          </li>
       
           <li class="nav-item">
@@ -142,7 +142,7 @@ $conn->close();
             <a class="nav-link js-scroll-trigger"href="../dbcontrol/view.php">Audited</a>
           </li>
           <li class="nav-item">
-            <a class="active" href="../dbcontrol/ourreports.php">Reports</a>
+            <a class="nav-link js-scroll-trigger" href="../dbcontrol/ourreports.php">Reports</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="../reports/main.php">Home-Page</a>
