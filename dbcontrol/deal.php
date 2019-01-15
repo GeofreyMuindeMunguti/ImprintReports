@@ -46,7 +46,11 @@ if ($conn->query($sql) === TRUE) {
 
 
 } else {
-      echo "error occured, please contact admin for assistance";
+       echo "<script>alert('There seems to have been an error,You will be redirected to an help page')</script>";
+        
+       sleep(5);
+       header("Location:view.php");
+
 }
 
  

@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 $servername = "db4free.net";
 $username = "geofrey";
 $password = "geofrey7543";
@@ -85,123 +85,95 @@ $sql = "SELECT  * FROM `deals` WHERE `link` = '$rvar'";
 $conn->close();
 ?>
   
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Our Trick</title>
-	 
-	  <link href="style.css" rel="stylesheet">
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	  <link rel="stylesheet" type="text/css" href="main.css">
+ <!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Imprint Africa</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../reports/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="../reports/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../reports/css/resume.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
-  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
-	    
-</head>
- 
-<body style="  margin-left:10%;
-        margin-right:10%;  id="print">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
-#main{
-  width:200px;
-  height:240px;
-  border:1px solid black;
-  padding:10px;
-}
-#main > div{
-  float:right;
-  margin:35px;;
-}
- 
-
-</style>
-</head>
-<body>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-   
       
-    <script type="text/javascript">
-      var url = document.URL();
-    </script>
-   
-   
-     <a href="javascript:q=(document.location.href);void(open('../dbcontrol/ourreports.php?url='+escape(q),'_self','resizable,location,menubar,toolbar,scrollbars,status'));">New Report</a>
+
+
+
+  </head>
+
+  <body id="page-top" >
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" style="background-color: rgba(15, 16, 51, 1) !important">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top" >
+        <span class="d-block d-lg-none">Imprint Africa Report Generating System</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="logo2.jpeg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+         <li class="nav-item">
+             <a href="javascript:q=(document.location.href);void(open('../dbcontrol/ourreports.php?url='+escape(q),'_self','resizable,location,menubar,toolbar,scrollbars,status'));">New Report</a>
+         </li>
       
-     
-</div>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="../dbcontrol/ourdeals.php">Deals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger"href="../dbcontrol/view.php">Audited</a>
+          </li>
+          <li class="nav-item">
+            <a class="active" href="../dbcontrol/ourreports.php">Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="../reports/main.php">Home-Page</a>
+          </li>
+          <li class="nav-item">
+          <button id="pdf" onclick="pdf()" style="text-decoration-color: white; color: blue; ">Print PDF</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
- <button id="pdf" onclick="pdf()" style="text-decoration-color: white; color: white; margin-right: auto;">Print PDF</button>
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
+    <div class="container-fluid p-0">
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-   
-
-
-<div id="content">
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+          <div id="content">
 
 <nav class="navbar navbar-inverse" id= "navbar" style="background-color: white;">
-  <div class="container-fluid">
+  <div class="container-fluid" style=" margin: 1rem;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s linear;
+  text-align:center;
+  
+
+  border: 2px solid black; ">
     <div class="navbar-header">
-    		<img src="logo2.jpeg" class="img-circle" alt="Cinque Terre" width="40px" height="40px" width="50px">      
+        <img src="logo2.jpeg" class="img-circle" alt="Cinque Terre" width="40px" height="40px" width="50px">      
     </div>
      <h3>Imprint Africa Reporting Generating System.</h3>
- 
-    
      <p></p> 
     <ul class="nav navbar-nav navbar-right">
 
@@ -209,10 +181,10 @@ function closeNav() {
   </div>
 </nav>
 <div id="content">
-  <h2>Report on <?php echo $_GET['id'];?> by Imprint Africa </h2>
+  <h2>Report on <?php  echo $var;?> by Imprint Africa </h2>
 <div class="container-fluid">
           <div class="animated fadeIn">
-            <div class="row" style="border: 1px solid #add8e6">
+            <div class="row" style=" ">
               <div class="col-sm-6 col-lg-3">
                 <div class="card text-white bg-primary">
                   <div class="card-body pb-0">
@@ -502,15 +474,15 @@ function closeNav() {
 </div>
 </div>
 </div>
-	 
    
-	  
+   
+    
  
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <script type="text/javascript">
 //total traffic grap
 window.onload = function () {
-	 var vst =  "<?php echo $visits ?>"/1;
+   var vst =  "<?php echo $visits ?>"/1;
    var rankn = "<?php echo $rank ?>"/1;
    var name ="<?php echo $var ?>";
    var dates = "<?php echo $date ?>";
@@ -557,22 +529,22 @@ window.onload = function () {
    var reext = rext/1;
     
 
-	var chart = new CanvasJS.Chart("chartContainer", {
-		title:{
-			text: "Scale (/1)"              
-		},
-		data: [              
-		{
-			// Change type to "doughnut", "line", "splineArea", etc.
-			type: "column",
-			dataPoints: [
-				{ label: "<?php echo $date ?>",  y: vst  },
-				{ label: "<?php echo $rdate ?>",  y: rvst  }
-			]
-		}
-		]
-	});
-	chart.render();
+  var chart = new CanvasJS.Chart("chartContainer", {
+    title:{
+      text: "Scale (/1)"              
+    },
+    data: [              
+    {
+      // Change type to "doughnut", "line", "splineArea", etc.
+      type: "column",
+      dataPoints: [
+        { label: "<?php echo $date ?>",  y: vst  },
+        { label: "<?php echo $rdate ?>",  y: rvst  }
+      ]
+    }
+    ]
+  });
+  chart.render();
 
 
 
@@ -741,6 +713,22 @@ function pdf()
       }
     
     </script>
-  
-</body>
+      </section>
+
+      <hr class="m-0">
+
+       </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../reports/vendor/jquery/jquery.min.js"></script>
+    <script src="../reports/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../reports/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../reports/js/resume.min.js"></script>
+
+  </body>
+
 </html>

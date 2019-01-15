@@ -5,6 +5,7 @@
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 body {
    
@@ -50,8 +51,7 @@ body {
 }
 </style>
 </head>
-<body style="  margin-left:10%;
-        margin-right:10%; ">
+<body style=" ">
 
 <div id="mySidenav" class="sidenav">
   <div class="sidebar-header">
@@ -59,18 +59,15 @@ body {
         <h3 style="color: white;"> Quick Links</h3>
         </div>
 
-        <ul class="list-unstyled components">
-            <a style="color: white;" href="http://www.imprintaf.com">ImprintAfrica.com</a>
-        </ul>
+         
         <hr/>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="../dbcontrol/ourdeals.php"><i class="fa fa-thumbs-up"></i>Deals</a>  
   <a href="../dbcontrol/ourreports.php"><i class="fa fa-file-pdf-o"></i>Reports</a>  
   <a href="../dbcontrol/view.php"><i class="fa fa-hourglass-half "></i>Audited</a> 
+  <a href="../reports/main.php"><i class="fa fa-thumbs-up"></i>Home-Page</a>  
  </div>
 
-
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
 <script>
 function openNav() {
@@ -105,6 +102,8 @@ function closeNav() {
     <ul class="nav navbar-nav navbar-right">
 
        </ul>
+
+       <span style="font-size:30px;cursor:pointer; color: white;" onclick="openNav()">&#9776; Menu</span>
   </div>
 </nav>
 
